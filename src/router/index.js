@@ -1,21 +1,27 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import HelloWorld from '@/components/HelloWorld';
-import Plop from '@/components/Plop';
+import VueCodemirror from 'vue-codemirror';
+import 'codemirror/mode/javascript/javascript';
+import 'codemirror/theme/monokai.css';
+
+import Main from '@/components/Main';
+import Code from '@/components/Code';
+
 
 Vue.use(Router);
+Vue.use(VueCodemirror);
 
 export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Hello',
-      component: HelloWorld,
+      name: 'Main',
+      component: Main,
     },
     {
-      path: '/plop',
-      name: 'Plop',
-      component: Plop,
+      path: '/code',
+      name: 'Code',
+      component: Code,
     },
   ],
 });
