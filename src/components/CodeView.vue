@@ -1,6 +1,6 @@
 <template>
   <div id="editor-container">
-    <div class="columns">
+    <div class="columns is-gapless">
       <div class="column">
         <Instruction>
           <h1>{{ title }}</h1>
@@ -15,7 +15,9 @@
           <div class="circle" id="circle3"></div>
         </div>
         <div class="tab-deco-container">
-          <div class="tab-header">Code</div>
+          <div class="tab-box">
+            <div class="tab-title">App.js</div>
+          </div>
         </div>
         <codemirror id="jsEditor"
                     ref="myEditor"
@@ -25,7 +27,17 @@
                     @focus="onEditorFocus"
                     @change="onEditorCodeChange">
         </codemirror>
-        <button class="button is-primary" @click="checkAnswer">Check My Work</button>
+        <div id="editor-footer">
+          <button class="button is-primary" @click="checkAnswer">Check My Work</button>
+          <codemirror id="jsEditor2"
+                      ref="myEditor2"
+                      :code="code"
+                      :options="editorOptions"
+                      @ready="onEditorReady"
+                      @focus="onEditorFocus"
+                      @change="onEditorCodeChange">
+          </codemirror>
+        </div>
       </div>
     </div>
   </div>
@@ -33,12 +45,14 @@
 
 <script>
   import Instruction from './Instruction';
+  import Navbar from './Navbar';
 
 
   export default {
-    name: 'Plop',
+    name: 'code-view',
     components: {
       Instruction,
+      Navbar,
     },
     data() {
       return {
@@ -51,7 +65,6 @@
         answer: '',
         checkedAnswer: '',
         editorOptions: {
-// codemirror options
           tabSize: 4,
           mode: 'text/javascript',
           theme: 'monokai',
@@ -153,22 +166,29 @@
     background-color: #373831;
   }
 
-  .tab-header {
+  .tab-box{
     width: 150px;
-    height: 28px;
+    height: 34px;
     position: absolute;
-    bottom: 0;
-    padding: 4px 0 0 10px;
-    left: 8px;
+    bottom: -1px;
+    padding: 8px 0 0 10px;
+    left: 14px;
     color: #dddddd;
     font-size: 0.9em;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    transform: perspective(80px) rotateX(30deg);
     border: 1px solid #1f201c;
-    border-bottom: 0px;
+    border-bottom: 0;
     background-color: #272823;
 
+  }
+
+  .tab-box-active {
+
+  }
+
+  .tab-title {
   }
 
   .read-only-code {
@@ -180,17 +200,16 @@
 
   }
 
+  #editor-footer {
+    border-top: 1px solid #111;
+    height: 50px;
+    padding: 6px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    background-color: #373831;
+  }
+
   #jsEditor {
   }
 
 </style>
-
-/*
-
-var index = client.initIndex('myIndex');
-
-`var algoliasearch = require('algoliasearch');
-var client = algoliasearch("AnAppID", "**************");
-var index = client.initIndex('your_index_name');
-`
-*/

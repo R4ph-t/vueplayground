@@ -1,18 +1,30 @@
 <template>
-  <div id="app" class="container is-fluid">
-    <router-view/>
+  <div id="app">
+    <Navbar></Navbar>
+    <div class="container is-fluid">
+      <router-view/>
+    </div>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'app',
-};
+  import Navbar from './components/Navbar';
+
+  export default {
+    name: 'app',
+    components: {
+      Navbar,
+    },
+  };
+
 </script>
 
 <style>
-#app {
+  #app {
+    font-family: 'Open Sans', sans-serif;
+  }
 
-  margin-top: 20px;
-}
+  h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+  }
 </style>

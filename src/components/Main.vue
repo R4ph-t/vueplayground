@@ -1,39 +1,58 @@
 <template>
   <div>
-    <tabs>
-      <tab name="About Us" :selected="true">
-        <h1>Here is the content for the about us tab.</h1>
-      </tab>
+    <div class="tile is-ancestor">
+      <div class="tile is-vertical is-8">
+        <div class="tile">
+          <div class="tile is-parent is-vertical">
+            <article class="tile is-child notification is-primary">
+              <p><router-link class="title" to="videos">Videos</router-link></p>
+              <p class="subtitle">Top tile</p>
+            </article>
+            <article class="tile is-child notification is-warning">
+              <p class="title">...tiles</p>
+              <p class="subtitle">Bottom tile</p>
+            </article>
+          </div>
+          <div class="tile is-parent">
+            <article class="tile is-child notification is-info">
+              <p><router-link class="title" to="paths">Path</router-link></p>
 
-      <tab name="About Our Culture">
-        <h1>Here is the content for the about our culture tab.</h1>
-      </tab>
-
-      <tab name="About Our Vision">
-        <h1>Here is the content for the about our vision tab.</h1>
-      </tab>
-    </tabs>
-    <message title="title 1" body="body"></message>
-    <message title="title 2" body="body 2"></message>
-    <button @click="showModal = true">show Modal</button>
-    <modal v-show="showModal" @closeModal="showModal = false">
-      <p>this is a freaking modal bra</p>
-    </modal>
+              <p class="subtitle">With an image</p>
+              <figure class="image is-4by3">
+                <img src="http://bulma.io/images/placeholders/640x480.png">
+              </figure>
+            </article>
+          </div>
+        </div>
+        <div class="tile is-parent">
+          <article class="tile is-child notification is-danger">
+            <p class="title">Wide tile</p>
+            <p class="subtitle">Aligned with the right tile</p>
+            <div class="content">
+              <!-- Content -->
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="tile is-parent">
+        <article class="tile is-child notification is-success">
+          <div class="content">
+            <p><router-link class="title" to="code">Sandbox</router-link></p>
+            <p class="subtitle">With even more content</p>
+            <div class="content">
+              <!-- Content -->
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-  import Message from './Message';
-  import Modal from './Modal';
-  import Tabs from './Tabs';
-  import Tab from './Tab';
 
   export default {
     components: {
-      Tabs,
-      Tab,
-      Modal,
-      Message,
     },
     name: 'HelloWorld',
     data() {
