@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar is-light" role="navigation" aria-label="main navigation">
+  <nav class="navbar is-white" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <p id="logo-container" href="#" class="navbar-item">
           <img id="logo" src="../assets/algolia-logo.svg">
@@ -34,6 +34,7 @@
   /*@import "./resources/assets/sass/variables";*/
   nav{
     margin-bottom: 15px;
+    box-shadow: 0 10px 40px 0 rgba(62, 57, 107, 0.07), 0 2px 9px 0 rgba(62, 57, 107, 0.06)
   }
   #logo-container {
     padding-right: 5px;

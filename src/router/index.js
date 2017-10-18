@@ -25,7 +25,7 @@ export default new Router({
       component: Code,
     },
     {
-      path: '/videos',
+      path: '/code-along',
       name: 'Videos',
       component: Videos,
     },

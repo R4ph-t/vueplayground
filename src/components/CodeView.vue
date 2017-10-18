@@ -29,14 +29,6 @@
         </codemirror>
         <div id="editor-footer">
           <button class="button is-primary" @click="checkAnswer">Check My Work</button>
-          <codemirror id="jsEditor2"
-                      ref="myEditor2"
-                      :code="code"
-                      :options="editorOptions"
-                      @ready="onEditorReady"
-                      @focus="onEditorFocus"
-                      @change="onEditorCodeChange">
-          </codemirror>
         </div>
       </div>
     </div>

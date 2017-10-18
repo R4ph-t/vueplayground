@@ -5,19 +5,19 @@
         <div class="tile">
           <div class="tile is-parent is-vertical">
             <article class="tile is-child notification is-primary">
-              <p><router-link class="title" to="videos">Videos</router-link></p>
-              <p class="subtitle">Top tile</p>
+              <p><router-link class="title" to="code-along">Code Along</router-link></p>
+              <p class="subtitle">Play with Algolia</p>
             </article>
             <article class="tile is-child notification is-warning">
-              <p class="title">...tiles</p>
+              <p class="title">a</p>
               <p class="subtitle">Bottom tile</p>
             </article>
           </div>
           <div class="tile is-parent">
             <article class="tile is-child notification is-info">
-              <p><router-link class="title" to="paths">Path</router-link></p>
+              <p><router-link class="title" to="paths">Featured</router-link></p>
 
-              <p class="subtitle">With an image</p>
+              <p class="subtitle">Discover Algolia Series</p>
               <figure class="image is-4by3">
                 <img src="http://bulma.io/images/placeholders/640x480.png">
               </figure>
@@ -26,8 +26,8 @@
         </div>
         <div class="tile is-parent">
           <article class="tile is-child notification is-danger">
-            <p class="title">Wide tile</p>
-            <p class="subtitle">Aligned with the right tile</p>
+            <p class="title">Some Stuff</p>
+            <p class="subtitle">...</p>
             <div class="content">
               <!-- Content -->
             </div>
