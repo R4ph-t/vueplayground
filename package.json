@@ -9,7 +9,7 @@
     "start": "node server.js",
     "build": "node build/build.js",
     "lint": "eslint --ext .js,.vue src",
-    "postinstall": "node build/build.js"
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
     "codemirror": "^5.30.0",
