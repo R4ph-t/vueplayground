@@ -4,7 +4,7 @@
       <div class="tile is-vertical is-8">
         <div class="tile">
           <div class="tile is-parent is-vertical">
-            <article class="tile is-child notification is-primary">
+            <article class="tile is-child notification is-danger">
               <p><router-link class="title" to="code-along">Code Along</router-link></p>
               <p class="subtitle">Play with Algolia</p>
             </article>
@@ -25,7 +25,7 @@
           </div>
         </div>
         <div class="tile is-parent">
-          <article class="tile is-child notification is-danger">
+          <article class="tile is-child notification is-primary">
             <p class="title">Some Stuff</p>
             <p class="subtitle">...</p>
             <div class="content">
