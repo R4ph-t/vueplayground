@@ -38,7 +38,7 @@
         <article class="tile is-child notification is-success">
           <div class="content">
             <p><router-link class="title" to="code">Sandbox</router-link></p>
-            <p class="subtitle">With even more content</p>
+            <p class="subtitle">Play with the API</p>
             <div class="content">
               <!-- Content -->
             </div>
